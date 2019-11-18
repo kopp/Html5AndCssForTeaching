@@ -88,17 +88,17 @@
               </code>
           </pre>
           </p>
-          <aside>
-              <p>
-              Mit den Favicons ist es nicht so einfach:
-              Wie man <a href="https://wiki.selfhtml.org/wiki/Grafik/Favicon">hier</a> sieht, braucht man das gleiche Bild in 4 Ausfertigungen/Auflösungen und mit verschiedenen Dateinamen, damit es auf allen Browsern richtig angezeigt wird.
-              Der hier gezeigte Header würde nicht mit allen Browsern funktionieren.
-              </p>
-              <p>
-              Seiten wie <a href="https://www.favicon-generator.org/">favicon-generator.org</a> helfen dabei, aus einem Bild die verschiedenen benötigten Bilder zu erstellen.
-              </p>
-          </aside>
       </section>
+      <aside>
+          <p>
+          Mit den Favicons ist es nicht so einfach:
+          Wie man <a href="https://wiki.selfhtml.org/wiki/Grafik/Favicon">hier</a> sieht, braucht man das gleiche Bild in 4 Ausfertigungen/Auflösungen und mit verschiedenen Dateinamen, damit es auf allen Browsern richtig angezeigt wird.
+          Der hier gezeigte Header würde nicht mit allen Browsern funktionieren.
+          </p>
+          <p>
+          Seiten wie <a href="https://www.favicon-generator.org/">favicon-generator.org</a> helfen dabei, aus einem Bild die verschiedenen benötigten Bilder zu erstellen.
+          </p>
+      </aside>
 
 
       <section>
@@ -114,46 +114,66 @@
               <li>aside: Anmerkungen zum Inhalt (bspw. Verweise auf Quellen oder Details)</li>
           </ul>
           <p>Dieser Text hier ist übrigens in einem <code>&lt;section&gt;</code> geschrieben; als erstes Element hat es eine Überschrift mit <code>&lt;h2&gt;</code>.</p>
-          <aside>
-              <p>Hier ist eine gute Übersicht zu den verschiedenen Elementen zum logischen Markup: <a href="https://wiki.selfhtml.org/wiki/HTML/Tutorials/HTML5/Seitenstrukturierung">Selfhtml</a>.</p>
-              <p><em>Hinweis: Dieser Text ist in einem <code>&lt;aside&gt;</code> geschrieben.</p>
-          </aside>
-          <aside>
-              <p>
-              Statt <code>&lt;section&gt;</code> kann man auch <code>&lt;article&gt;</code> für die einzelnen Inhalte verwenden.
-              Der Unterschied ist nicht groß und wird immer wieder diskutiert.
-              Der Konsens ist bisher, dass ein <em>article</em> für sich alleine stehen können muss, ein <em>section</em> eher im Zusammenhang mit anderen <em>section</em>s auf der Seite verstanden wird.
-              </p>
-          </aside>
       </section>
+      <aside>
+          <p>Hier ist eine gute Übersicht zu den verschiedenen Elementen zum logischen Markup: <a href="https://wiki.selfhtml.org/wiki/HTML/Tutorials/HTML5/Seitenstrukturierung">Selfhtml</a>.</p>
+          <p><em>Hinweis: Dieser Text ist in einem <code>&lt;aside&gt;</code> geschrieben.</em></p>
+      </aside>
+      <aside>
+          <p>
+          Statt <code>&lt;section&gt;</code> kann man auch <code>&lt;article&gt;</code> für die einzelnen Inhalte verwenden.
+          Der Unterschied ist nicht groß und wird immer wieder diskutiert.
+          Der Konsens ist bisher, dass ein <em>article</em> für sich alleine stehen können muss, ein <em>section</em> eher im Zusammenhang mit anderen <em>section</em>s auf der Seite verstanden wird.
+          </p>
+      </aside>
+
+      <section>
+          <h2>Flexbox</h2>
+          <p>Mit Flexbox kann man mit relativ geringem Aufwand Websiten gestalten, die responsiv sind (also sich an Handy/PC anpassen).</p>
+          <p>
+          Dazu werden <em>Container</em> mit <code>display: flex;</code> im CSS definiert.
+          Die Größe der Elemente, die darin sitzen (sogenannte <em>Items</em>), werden dann vom Browser automatisch passend zu ihrem Inhalt berechnet -- bspw. wird eine Box mit wenig Text darin schmäler als eine Box mit viel Text, sodass beide die gleiche Höhe haben.
+          </p>
+      </section>
+      <aside>
+          <p>
+          <a href="https://wiki.selfhtml.org/wiki/CSS/Tutorials/Flexbox/Mehrspaltenlayout">Hier</a>
+          ist eine CSS-Datei beschrieben, mit der man diese Seite hier stylen könnte: Responsiv und mit flexboxen.
+          Dabei müsste man nur alle Vorkommnisse von <code>article</code> in dem Text durch <code>section</code> ersetzen.
+          </p>
+      </aside>
 
       <section>
           <h2>Tools</h2>
 
-          <h3>Validatoren</h3>
-          <p>Validatoren helfen, Fehler in HTML oder CSS zu finden.</p>
-          <p>w3.org stellt die folgenden bereit:
-          <ul>
-              <li><a href="https://validator.w3.org/#validate_by_input">HTML-Validator</a></li>
-              <li><a href="https://jigsaw.w3.org/css-validator/#validate_by_input">CSS-Validator</a></li>
-          </ul>
-          </p>Man verwendet sie, indem man seinen code dort reinkopiert, alle Fehler beseitigt und dann den Code wieder in die ursprüngliche Datei einfügt.</p>
+          <section> <!-- die sections dürfen auch verschachtelt sein -->
+              <h3>Validatoren</h3>
+              <p>Validatoren helfen, Fehler in HTML oder CSS zu finden.</p>
+              <p>w3.org stellt die folgenden bereit:
+              <ul>
+                  <li><a href="https://validator.w3.org/#validate_by_input">HTML-Validator</a></li>
+                  <li><a href="https://jigsaw.w3.org/css-validator/#validate_by_input">CSS-Validator</a></li>
+              </ul>
+              </p>Man verwendet sie, indem man seinen code dort reinkopiert, alle Fehler beseitigt und dann den Code wieder in die ursprüngliche Datei einfügt.</p>
+          </section>
 
-          <h3>Escaper</h3>
-          <p>
-          In HTML haben manche Zeichen, wie <code>&lt;</code> eine bestimmte Bedeutung.
-          Will man sie verwenden, muss man sie <em>escapen</em>.
-          Das kann man bspw. <a href="https://www.freeformatter.com/html-escape.html">hier</a> tun.
-          </p>
+          <section>
+              <h3>Escaper</h3>
+              <p>
+              In HTML haben manche Zeichen, wie <code>&lt;</code> eine bestimmte Bedeutung.
+              Will man sie verwenden, muss man sie <em>escapen</em>.
+              Das kann man bspw. <a href="https://www.freeformatter.com/html-escape.html">hier</a> tun.
+              </p>
+          </section>
 
-          <h3>Entwicklungsumgebungen</h3>
-          <ul>
-              <li>Notepad++</li>
-              <li>VSCode</li>
-              <li>Chrome</li>
-          </ul>
-
-          <p>Dieser Inhalt soll nach <a href="tools.html">tools</a> wandern!</p>
+          <section>
+              <h3>Entwicklungsumgebungen</h3>
+              <ul>
+                  <li>Notepad++</li>
+                  <li>VSCode</li>
+                  <li>Chrome</li>
+              </ul>
+          </section>
       </section>
 
   </main>
